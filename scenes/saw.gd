@@ -1,8 +1,8 @@
-extends Area2D
+extends RigidBody2D
 
-export var sceneName: String = "Level 1"
+export var sceneName: String = "LoseScreen"
 
 
-func _on_Area2D_body_entered(body):
+func _on_RigidBody2D_body_entered(body):
 	if body.get_name() == "Player":
 		get_tree().change_scene(str("res://scenes/" + sceneName + ".tscn"))
