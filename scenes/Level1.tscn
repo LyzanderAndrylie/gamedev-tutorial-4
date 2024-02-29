@@ -1,9 +1,11 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/kenney_platformerpack/Spritesheets/spritesheet_gr_grass.png" type="Texture" id=2]
 [ext_resource path="res://assets/Familiar Looking Rocket.png" type="Texture" id=3]
 [ext_resource path="res://scenes/AreaTrigger.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/Spawner.gd" type="Script" id=5]
+[ext_resource path="res://scenes/FallingFish.tscn" type="PackedScene" id=6]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 128, 128, 0, 128, 0, 0, 128, 0 )
@@ -246,3 +248,8 @@ sceneName = "WinScreen"
 position = Vector2( 540, 413 )
 scale = Vector2( 100, 4 )
 sceneName = "LoseScreen"
+
+[node name="Spawner" type="Node2D" parent="."]
+position = Vector2( 820, -645 )
+script = ExtResource( 5 )
+obstacle = ExtResource( 6 )
